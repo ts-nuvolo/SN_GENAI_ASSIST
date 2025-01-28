@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>ask_genai_dialogue_box</name>
+        <scoped_name>x_1477763_genai_as_ask_genai_dialogue_box</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-27 22:19:49</sys_created_on>
+        <sys_id>a84efaeac31712107e0ddb0d05013149</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>ask_genai_dialogue_box</sys_name>
+        <sys_package display_value="GenAI Assist" source="x_1477763_genai_as">978cf62ac31712107e0ddb0d050131ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GenAI Assist">978cf62ac31712107e0ddb0d050131ba</sys_scope>
+        <sys_update_name>sys_ui_macro_a84efaeac31712107e0ddb0d05013149</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-27 22:37:37</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Dialog Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">${jelly:gs.getMessage('Your Dialog Title')}</h4>
+            </div>
+            
+            <!-- Dialog Body -->
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="input1">${jelly:gs.getMessage('Field Label')}:</label>
+                    <input type="text" id="input1" class="form-control" />
+                </div>
+                <!-- Add more form fields as needed -->
+            </div>
+            
+            <!-- Dialog Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" onclick="GlideModal.get().destroy()">
+                    ${jelly:gs.getMessage('Cancel')}
+                </button>
+                <button type="button" class="btn btn-primary" onclick="submitDialog()">
+                    ${jelly:gs.getMessage('Submit')}
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        function submitDialog() {
+            // Get input values
+            var input1Value = document.getElementById('input1').value;
+            
+            // Perform your submit logic here
+            // For example, update the current record:
+            var ga = new GlideAjax('YourScriptIncludeName');
+            ga.addParam('sysparm_name', 'yourServerMethod');
+            ga.addParam('sysparm_value', input1Value);
+            ga.getXML(function(response) {
+                var answer = response.responseXML.documentElement.getAttribute('answer');
+                
+                // Handle the response
+                if (answer === 'success') {
+                    g_form.addInfoMessage('Successfully submitted!');
+                    GlideModal.get().destroy(); // Close the dialog
+                } else {
+                    g_form.addErrorMessage('Error submitting data');
+                }
+            });
+        }
+        
+        // Optional: Add form validation
+        function validateForm() {
+            var input1 = document.getElementById('input1').value;
+            if (!input1) {
+                g_form.addErrorMessage('Please fill in all required fields');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>
