@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="DELETE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content/>
+        <function_name>Default GET</function_name>
+        <http_method>get</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>ChatGPT [ Default GET ]</qualified_name>
+        <rest_endpoint>GenAiAssist</rest_endpoint>
+        <rest_message display_value="ChatGPT">9d874be6c35712107e0ddb0d050131f1</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-27 23:00:05</sys_created_on>
+        <sys_id>4ba787a6c35712107e0ddb0d050131c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Default GET</sys_name>
+        <sys_package display_value="GenAI Assist" source="x_1477763_genai_as">978cf62ac31712107e0ddb0d050131ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GenAI Assist">978cf62ac31712107e0ddb0d050131ba</sys_scope>
+        <sys_update_name>sys_rest_message_fn_4ba787a6c35712107e0ddb0d050131c6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-27 23:00:05</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GenAI Assist">978cf62ac31712107e0ddb0d050131ba</application>
+        <file_path/>
+        <instance_id>fba3a541fbb34e500c92f633beefdc35</instance_id>
+        <instance_name>dev284860</instance_name>
+        <name>sys_rest_message_fn_4ba787a6c35712107e0ddb0d050131c6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn"><sys_rest_message_fn action="INSERT_OR_UPDATE"><authentication_type>inherit_from_parent</authentication_type><basic_auth_password/><basic_auth_profile/><basic_auth_user/><content/><function_name>Default GET</function_name><http_method>get</http_method><lock>false</lock><oauth2_profile/><protocol_name/><qualified_name>ChatGPT [ Default GET ]</qualified_name><rest_endpoint>GenAiAssist</rest_endpoint><rest_message display_value="ChatGPT">9d874be6c35712107e0ddb0d050131f1</rest_message><sys_class_name>sys_rest_message_fn</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-27 23:00:05</sys_created_on><sys_id>4ba787a6c35712107e0ddb0d050131c6</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Default GET</sys_name><sys_package display_value="GenAI Assist" source="x_1477763_genai_as">978cf62ac31712107e0ddb0d050131ba</sys_package><sys_policy/><sys_scope display_value="GenAI Assist">978cf62ac31712107e0ddb0d050131ba</sys_scope><sys_update_name>sys_rest_message_fn_4ba787a6c35712107e0ddb0d050131c6</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-27 23:00:05</sys_updated_on><use_basic_auth>false</use_basic_auth><use_mid_server/><use_mutual_auth>false</use_mutual_auth></sys_rest_message_fn></record_update>]]></payload>
+        <payload_hash>-1514613233</payload_hash>
+        <record_name>Default GET</record_name>
+        <reverted_from/>
+        <source>538cf62ac31712107e0ddb0d050131bf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-27 23:00:05</sys_created_on>
+        <sys_id>4fa787a6c35712107e0ddb0d050131c9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194a9fe58780000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-27 23:00:05</sys_updated_on>
+        <type>HTTP Method</type>
+        <update_guid>43a787a6335712102b5efc2505ac70c9</update_guid>
+        <update_guid_history>43a787a6335712102b5efc2505ac70c9:-1514613233</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 14:55:57</sys_created_on>
+        <sys_db_object display_value="" name="sys_rest_message_fn">sys_rest_message_fn</sys_db_object>
+        <sys_id>49b6a8d91f324c30b608763a332220a4</sys_id>
+        <sys_metadata>4ba787a6c35712107e0ddb0d050131c6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Default GET</sys_name>
+        <sys_package display_value="GenAI Assist" source="x_1477763_genai_as">978cf62ac31712107e0ddb0d050131ba</sys_package>
+        <sys_parent display_value="ChatGPT">9d874be6c35712107e0ddb0d050131f1</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="GenAI Assist">978cf62ac31712107e0ddb0d050131ba</sys_scope>
+        <sys_scope_delete display_value="">37966fd6f933443a92b077cdbb70ef64</sys_scope_delete>
+        <sys_update_name>sys_rest_message_fn_4ba787a6c35712107e0ddb0d050131c6</sys_update_name>
+        <sys_update_version display_value="sys_rest_message_fn_4ba787a6c35712107e0ddb0d050131c6">4fa787a6c35712107e0ddb0d050131c9</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 14:55:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

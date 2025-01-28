@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="DELETE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>ask_genai_dialogue_box</name>
+        <scoped_name>x_1477763_genai_as_ask_genai_dialogue_box</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-27 22:19:49</sys_created_on>
+        <sys_id>a84efaeac31712107e0ddb0d05013149</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>ask_genai_dialogue_box</sys_name>
+        <sys_package display_value="GenAI Assist" source="x_1477763_genai_as">978cf62ac31712107e0ddb0d050131ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GenAI Assist">978cf62ac31712107e0ddb0d050131ba</sys_scope>
+        <sys_update_name>sys_ui_macro_a84efaeac31712107e0ddb0d05013149</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-27 22:37:37</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Dialog Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">${jelly:gs.getMessage('Your Dialog Title')}</h4>
+            </div>
+            
+            <!-- Dialog Body -->
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="input1">${jelly:gs.getMessage('Field Label')}:</label>
+                    <input type="text" id="input1" class="form-control" />
+                </div>
+                <!-- Add more form fields as needed -->
+            </div>
+            
+            <!-- Dialog Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" onclick="GlideModal.get().destroy()">
+                    ${jelly:gs.getMessage('Cancel')}
+                </button>
+                <button type="button" class="btn btn-primary" onclick="submitDialog()">
+                    ${jelly:gs.getMessage('Submit')}
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        function submitDialog() {
+            // Get input values
+            var input1Value = document.getElementById('input1').value;
+            
+            // Perform your submit logic here
+            // For example, update the current record:
+            var ga = new GlideAjax('YourScriptIncludeName');
+            ga.addParam('sysparm_name', 'yourServerMethod');
+            ga.addParam('sysparm_value', input1Value);
+            ga.getXML(function(response) {
+                var answer = response.responseXML.documentElement.getAttribute('answer');
+                
+                // Handle the response
+                if (answer === 'success') {
+                    g_form.addInfoMessage('Successfully submitted!');
+                    GlideModal.get().destroy(); // Close the dialog
+                } else {
+                    g_form.addErrorMessage('Error submitting data');
+                }
+            });
+        }
+        
+        // Optional: Add form validation
+        function validateForm() {
+            var input1 = document.getElementById('input1').value;
+            if (!input1) {
+                g_form.addErrorMessage('Please fill in all required fields');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GenAI Assist">978cf62ac31712107e0ddb0d050131ba</application>
+        <file_path/>
+        <instance_id>fba3a541fbb34e500c92f633beefdc35</instance_id>
+        <instance_name>dev284860</instance_name>
+        <name>sys_ui_macro_a84efaeac31712107e0ddb0d05013149</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_macro"&gt;&lt;sys_ui_macro action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;category&gt;general&lt;/category&gt;&lt;description/&gt;&lt;media_type/&gt;&lt;name&gt;ask_genai_dialogue_box&lt;/name&gt;&lt;scoped_name&gt;x_1477763_genai_as_ask_genai_dialogue_box&lt;/scoped_name&gt;&lt;sys_class_name&gt;sys_ui_macro&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-27 22:19:49&lt;/sys_created_on&gt;&lt;sys_id&gt;a84efaeac31712107e0ddb0d05013149&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;ask_genai_dialogue_box&lt;/sys_name&gt;&lt;sys_package display_value="GenAI Assist" source="x_1477763_genai_as"&gt;978cf62ac31712107e0ddb0d050131ba&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="GenAI Assist"&gt;978cf62ac31712107e0ddb0d050131ba&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_macro_a84efaeac31712107e0ddb0d05013149&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-27 22:37:37&lt;/sys_updated_on&gt;&lt;xml&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+    &lt;div class="modal-dialog"&gt;
+        &lt;div class="modal-content"&gt;
+            &lt;!-- Dialog Header --&gt;
+            &lt;div class="modal-header"&gt;
+                &lt;h4 class="modal-title"&gt;${jelly:gs.getMessage('Your Dialog Title')}&lt;/h4&gt;
+            &lt;/div&gt;
+            
+            &lt;!-- Dialog Body --&gt;
+            &lt;div class="modal-body"&gt;
+                &lt;div class="form-group"&gt;
+                    &lt;label for="input1"&gt;${jelly:gs.getMessage('Field Label')}:&lt;/label&gt;
+                    &lt;input type="text" id="input1" class="form-control" /&gt;
+                &lt;/div&gt;
+                &lt;!-- Add more form fields as needed --&gt;
+            &lt;/div&gt;
+            
+            &lt;!-- Dialog Footer --&gt;
+            &lt;div class="modal-footer"&gt;
+                &lt;button type="button" class="btn btn-default" onclick="GlideModal.get().destroy()"&gt;
+                    ${jelly:gs.getMessage('Cancel')}
+                &lt;/button&gt;
+                &lt;button type="button" class="btn btn-primary" onclick="submitDialog()"&gt;
+                    ${jelly:gs.getMessage('Submit')}
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;script type="text/javascript"&gt;
+        function submitDialog() {
+            // Get input values
+            var input1Value = document.getElementById('input1').value;
+            
+            // Perform your submit logic here
+            // For example, update the current record:
+            var ga = new GlideAjax('YourScriptIncludeName');
+            ga.addParam('sysparm_name', 'yourServerMethod');
+            ga.addParam('sysparm_value', input1Value);
+            ga.getXML(function(response) {
+                var answer = response.responseXML.documentElement.getAttribute('answer');
+                
+                // Handle the response
+                if (answer === 'success') {
+                    g_form.addInfoMessage('Successfully submitted!');
+                    GlideModal.get().destroy(); // Close the dialog
+                } else {
+                    g_form.addErrorMessage('Error submitting data');
+                }
+            });
+        }
+        
+        // Optional: Add form validation
+        function validateForm() {
+            var input1 = document.getElementById('input1').value;
+            if (!input1) {
+                g_form.addErrorMessage('Please fill in all required fields');
+                return false;
+            }
+            return true;
+        }
+    &lt;/script&gt;
+&lt;/j:jelly&gt;]]&gt;&lt;/xml&gt;&lt;/sys_ui_macro&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1538562295</payload_hash>
+        <record_name>ask_genai_dialogue_box</record_name>
+        <reverted_from/>
+        <source>538cf62ac31712107e0ddb0d050131bf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-27 22:37:37</sys_created_on>
+        <sys_id>79824762c35712107e0ddb0d050131b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194a9e9c67c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-27 22:37:37</sys_updated_on>
+        <type>Macro</type>
+        <update_guid>71824762e05712106e233d69bdb8fab6</update_guid>
+        <update_guid_history>71824762e05712106e233d69bdb8fab6:1538562295,39108f2e8d171210bc5c359521782378:-1838849865,299fbe2e17171210bbc27d37b4e15973:1238899218,ffce7eaa05171210d9a826ae32ebd7eb:596344738,608e322ee81712108652446a6cf75e43:-1481113580,897efeea2a1712109b770440ac51a64a:768301312</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 14:53:06</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_macro">sys_ui_macro</sys_db_object>
+        <sys_id>012ef8023a004c66800e220a10cf5e31</sys_id>
+        <sys_metadata>a84efaeac31712107e0ddb0d05013149</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ask_genai_dialogue_box</sys_name>
+        <sys_package display_value="GenAI Assist" source="x_1477763_genai_as">978cf62ac31712107e0ddb0d050131ba</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GenAI Assist">978cf62ac31712107e0ddb0d050131ba</sys_scope>
+        <sys_scope_delete display_value="">37966fd6f933443a92b077cdbb70ef64</sys_scope_delete>
+        <sys_update_name>sys_ui_macro_a84efaeac31712107e0ddb0d05013149</sys_update_name>
+        <sys_update_version display_value="sys_ui_macro_a84efaeac31712107e0ddb0d05013149">79824762c35712107e0ddb0d050131b6</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 14:53:06</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

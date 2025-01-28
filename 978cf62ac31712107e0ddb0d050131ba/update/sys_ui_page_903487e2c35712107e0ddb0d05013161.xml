@@ -1,8 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
     <sys_ui_page action="INSERT_OR_UPDATE">
         <category>general</category>
-        <client_script/>
-        <description/>
+        <client_script><![CDATA[ function submitQuestion() {
+     var questionText = document.getElementById('question').value;
+     if (!questionText) {
+         alert('Please enter a question');
+         return;
+     }
+
+     // Show loading state
+     var responseDiv = document.getElementById('response');
+     responseDiv.style.display = 'block';
+     responseDiv.innerHTML = 'Processing your question...';
+
+     // Make GlideAjax call
+     var ga = new GlideAjax('ChatGPTProcessor');
+     ga.addParam('sysparm_name', 'askQuestion');
+     ga.addParam('sysparm_question', questionText);
+     ga.getXMLAnswer(function(response) {
+         try {
+             var data = JSON.parse(response);
+             var responseObj = JSON.parse(data.response);
+
+             if (responseObj.error) {
+                 responseDiv.innerHTML = '<div class="text-danger">Error: ' + responseObj.error.message + '</div>';
+             } else {
+                 responseDiv.innerHTML = '<strong>Response:</strong><br>' +
+                     (responseObj || 'Completed successfully').replace(/\n/g, '<br>');
+             }
+         } catch (error) {
+             responseDiv.innerHTML = '<div class="text-danger">Error processing request.</div>';
+         }
+     });
+ }]]></client_script>
+        <description>Ui Page to make communicate with ChatGPT</description>
         <direct>false</direct>
         <endpoint>x_1477763_genai_as_ask_genai_dialogue_page.do</endpoint>
         <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
@@ -28,41 +59,6 @@
             </div>
         </div>
     </div>
-
-    <script type="text/javascript">
-    function submitQuestion() {
-        var questionText = document.getElementById('question').value;
-        if (!questionText) {
-            alert('Please enter a question');
-            return;
-        }
-
-        // Show loading state
-        var responseDiv = document.getElementById('response');
-        responseDiv.style.display = 'block';
-        responseDiv.innerHTML = 'Processing your question...';
-
-        // Make GlideAjax call
-        var ga = new GlideAjax('ChatGPTProcessor');
-        ga.addParam('sysparm_name', 'askQuestion');
-        ga.addParam('sysparm_question', questionText);
-        ga.getXMLAnswer(function(response) {
-            try {
-                var data = JSON.parse(response);
-                if (data.error) {
-                    responseDiv.innerHTML = '<div class="text-danger">Error: ' + data.error + '</div>';
-                } else {
-                    responseDiv.innerHTML = '<strong>Response:</strong><br></br>' + 
-                        (data.response || 'Completed successfully').replace(/\n/g, '<br></br>');
-                }
-            } catch (error) {
-				gs.info("TS "+error);
-                console.log('Error:', error);
-                responseDiv.innerHTML = '<div class="text-danger">Error processing request.</div>';
-            }
-        });
-    }
-</script>
 </j:jelly>]]></html>
         <name>ask_genai_dialogue_page</name>
         <processing_script/>
@@ -70,14 +66,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-27 22:52:01</sys_created_on>
         <sys_id>903487e2c35712107e0ddb0d05013161</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>ask_genai_dialogue_page</sys_name>
         <sys_package display_value="GenAI Assist" source="x_1477763_genai_as">978cf62ac31712107e0ddb0d050131ba</sys_package>
         <sys_policy/>
         <sys_scope display_value="GenAI Assist">978cf62ac31712107e0ddb0d050131ba</sys_scope>
         <sys_update_name>sys_ui_page_903487e2c35712107e0ddb0d05013161</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-27 23:56:40</sys_updated_on>
+        <sys_updated_on>2025-01-28 15:18:37</sys_updated_on>
     </sys_ui_page>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>903487e2c35712107e0ddb0d05013161</id>
