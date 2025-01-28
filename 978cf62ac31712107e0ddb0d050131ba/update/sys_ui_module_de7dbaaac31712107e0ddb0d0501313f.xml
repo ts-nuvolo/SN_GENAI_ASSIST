@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="GenAI">967dbaaac31712107e0ddb0d0501313c</application>
+        <filter/>
+        <name>GenAIs</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_1477763_genai_as.genai_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-27 22:15:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>de7dbaaac31712107e0ddb0d0501313f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GenAIs</sys_name>
+        <sys_package display_value="GenAI Assist" source="x_1477763_genai_as">978cf62ac31712107e0ddb0d050131ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GenAI Assist">978cf62ac31712107e0ddb0d050131ba</sys_scope>
+        <sys_update_name>sys_ui_module_de7dbaaac31712107e0ddb0d0501313f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-27 22:15:32</sys_updated_on>
+        <table>x_1477763_genai_as_genai</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+</record_update>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="006df6aac31712107e0ddb0d050131d5" extends="task" label="GenAI" max_length="40" name="x_1477763_genai_as_genai" type="collection"/>
+</database>

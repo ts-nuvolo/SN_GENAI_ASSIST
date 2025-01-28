@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
+        <name>model</name>
+        <rest_message_function display_value="default">46e7432ac35712107e0ddb0d050131a5</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-27 23:07:18</sys_created_on>
+        <sys_id>e0594fe6c35712107e0ddb0d050131ab</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>model</sys_name>
+        <sys_package display_value="GenAI Assist" source="x_1477763_genai_as">978cf62ac31712107e0ddb0d050131ba</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GenAI Assist">978cf62ac31712107e0ddb0d050131ba</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_e0594fe6c35712107e0ddb0d050131ab</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-27 23:09:25</sys_updated_on>
+        <type>string</type>
+        <value>gpt-4o-mini</value>
+    </sys_rest_message_fn_parameters>
+</record_update>
